@@ -70,16 +70,12 @@
 }
 
 
-- (void)dealloc {
-	
-	self.iPadmap;
-	self.iPhonemap;
-	
-}
 
 
 - (IBAction) startButton:(id)sender
 {
+    
+    //TODO
 	
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
