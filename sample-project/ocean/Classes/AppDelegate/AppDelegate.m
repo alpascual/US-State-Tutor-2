@@ -129,7 +129,8 @@
     [self configureTabBarItemWithImageName:@"tab-icon1.png" andText:@"Elements" forViewController:controller1];
     
     
-    UIViewController *controller2 = [[tabBarController viewControllers] objectAtIndex:1];
+    
+    /*UIViewController *controller2 = [[tabBarController viewControllers] objectAtIndex:1];
     [self configureTabBarItemWithImageName:@"tab-icon2.png" andText:@"Elements" forViewController:controller2];
     
     
@@ -138,7 +139,7 @@
     
     
     UIViewController *controller4 = [[tabBarController viewControllers] objectAtIndex:3];
-    [self configureTabBarItemWithImageName:@"tab-icon4.png" andText:@"Other" forViewController:controller4];
+    [self configureTabBarItemWithImageName:@"tab-icon4.png" andText:@"Other" forViewController:controller4];*/
     
 }
 
