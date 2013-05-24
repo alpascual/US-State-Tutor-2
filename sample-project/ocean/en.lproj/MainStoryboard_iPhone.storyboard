@@ -13,7 +13,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.48591548204421997" contentMode="scaleToFill" image="backDrop.jpg" id="ppj-ni-PtY">
+                            <imageView userInteractionEnabled="NO" alpha="0.58591548204421995" contentMode="scaleToFill" image="baby-blue-solid.jpg" id="ppj-ni-PtY">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -41,11 +41,11 @@
                                     <action selector="startButton:" destination="lkW-gh-6XG" eventType="touchDown" id="E4b-dQ-2ke"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Find the states by clicking at the red pin." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="10" id="WtI-Cc-qx5">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Find the states by clicking at the red pin." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="10" id="WtI-Cc-qx5">
                                 <rect key="frame" x="53" y="30" width="207" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                         </subviews>
@@ -56,62 +56,120 @@
                     <connections>
                         <outlet property="levelControl" destination="auJ-WE-C3N" id="XTi-lW-bi5"/>
                         <outlet property="startButton" destination="tQP-WJ-E6e" id="jMm-3P-xnf"/>
-                        <segue destination="ltA-vL-ybE" kind="push" identifier="main" id="Yq0-ut-CZD"/>
+                        <segue destination="ltA-vL-ybE" kind="modal" identifier="mainSegue" id="Yq0-ut-CZD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bfp-EV-BgQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1343" y="51"/>
         </scene>
-        <!--I Phone Controls Controller-->
+        <!--Congratulations Controller-->
         <scene sceneID="fny-fJ-ftP">
             <objects>
-                <viewController id="bsd-AV-U5q" customClass="iPhoneControlsController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ODs-Fl-50l">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <viewController id="bsd-AV-U5q" customClass="CongratulationsController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="49Z-xl-HL7">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="JvD-zx-ho5">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text Input" minimumFontSize="17" background="ipad-text-input.png" id="O8m-4k-OxX">
-                                        <rect key="frame" x="10" y="310" width="300" height="37"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="textColor" white="0.38574931569999998" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="Ir2-xs-gfU">
-                                        <rect key="frame" x="10" y="280" width="300" height="9"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </progressView>
-                                </subviews>
-                            </scrollView>
+                            <imageView userInteractionEnabled="NO" alpha="0.70000000000000007" contentMode="scaleToFill" image="backDrop.jpg" id="7fl-VD-q1v">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="yellow_star-1331px.png" id="2Jb-lF-VDQ">
+                                <rect key="frame" x="71" y="55" width="176" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" lineBreakMode="tailTruncation" minimumFontSize="10" id="KlF-v5-Ny0">
+                                <rect key="frame" x="155" y="108" width="18" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HmJ-Vf-khK">
+                                <rect key="frame" x="88" y="248" width="145" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <size key="titleShadowOffset" width="0.0" height="-1"/>
+                                <state key="normal" title="Play Again" backgroundImage="ipad-button-blue.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.18039215689999999" blue="0.33725490200000002" alpha="0.67000000000000004" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAgain:" destination="bsd-AV-U5q" eventType="touchDown" id="rcx-II-CqG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     </view>
                     <navigationItem key="navigationItem" id="hYy-cs-JRl"/>
                     <connections>
-                        <outlet property="nativePB" destination="Ir2-xs-gfU" id="r49-cO-nbh"/>
-                        <outlet property="scrollView" destination="JvD-zx-ho5" id="BuJ-Aj-jCN"/>
-                        <outlet property="textInput" destination="O8m-4k-OxX" id="5pb-r7-f7B"/>
+                        <outlet property="myScore" destination="KlF-v5-Ny0" id="B3U-D4-g2f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o5G-LA-bzv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1361" y="701"/>
+            <point key="canvasLocation" x="1579" y="684"/>
         </scene>
-        <!--View Controller-->
+        <!--I Phone Map-->
         <scene sceneID="tNe-FV-arq">
             <objects>
-                <viewController id="ltA-vL-ybE" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9J1-wU-ybL">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <viewController id="ltA-vL-ybE" customClass="iPhoneMap" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ujC-g0-0Zo">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView alpha="0.3732394278049469" contentMode="scaleToFill" image="PleaseWait.gif" id="iP3-Xq-9y3">
+                                <rect key="frame" x="11" y="0.0" width="300" height="408"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Question?" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="none" minimumFontSize="15" id="fcc-c3-T8D">
+                                <rect key="frame" x="25" y="47" width="203" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="TN_09-10_S_22A.jpg" id="SSB-Yc-Shx">
+                                <rect key="frame" x="248" y="78" width="72" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="4Le-zN-n6U">
+                                <rect key="frame" x="0.0" y="135" width="320" height="325"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </mapView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="star.jpg" id="xKt-Ti-ff7">
+                                <rect key="frame" x="11" y="99" width="38" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" lineBreakMode="tailTruncation" minimumFontSize="10" id="uHh-RT-2tb">
+                                <rect key="frame" x="85" y="103" width="42" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ICj-3b-9q9">
+                                <rect key="frame" x="1" y="0.0" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </adBannerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ce1-xv-OsZ"/>
+                    <connections>
+                        <outlet property="mapView" destination="4Le-zN-n6U" id="cea-oB-6fr"/>
+                        <outlet property="overlay" destination="iP3-Xq-9y3" id="Gf5-ao-zfT"/>
+                        <outlet property="questionLabel" destination="fcc-c3-T8D" id="S08-sB-YqG"/>
+                        <outlet property="scoreLabel" destination="uHh-RT-2tb" id="nqK-Bs-z3t"/>
+                        <segue destination="bsd-AV-U5q" kind="modal" identifier="congratulationsSegue" id="uaZ-Uo-uFp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fZr-FF-LyT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -128,9 +186,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="6n4-N9-rif" kind="relationship" relationship="viewControllers" id="HH6-6G-5DJ"/>
-                        <segue destination="KpX-Gu-1jt" kind="relationship" relationship="viewControllers" id="5jC-0O-FAT"/>
-                        <segue destination="Y9j-Ix-f3A" kind="relationship" relationship="viewControllers" id="KPo-oU-whe"/>
-                        <segue destination="iuo-gW-eAj" kind="relationship" relationship="viewControllers" id="Bez-2M-LeY"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="69q-dd-I3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -156,61 +211,24 @@
             </objects>
             <point key="canvasLocation" x="817" y="51"/>
         </scene>
-        <!--Navigation Controller - Item-->
-        <scene sceneID="aFn-yG-BEb">
-            <objects>
-                <navigationController id="KpX-Gu-1jt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="3qb-SG-jTo"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="akp-hG-h0e">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="bsd-AV-U5q" kind="relationship" relationship="rootViewController" id="7v7-4m-kkz"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wvc-b4-w5t" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="835" y="701"/>
-        </scene>
-        <!--View Controller - Item-->
-        <scene sceneID="Xhl-b8-NRi">
-            <objects>
-                <viewController id="Y9j-Ix-f3A" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="XMJ-PC-NtS">
-                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="sIr-bD-Yny"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YS5-W5-WEk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="827" y="1358"/>
-        </scene>
-        <!--View Controller - Item-->
-        <scene sceneID="uDn-Ct-bWs">
-            <objects>
-                <viewController id="iuo-gW-eAj" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VMc-r9-EpU">
-                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="j4F-RX-fOn"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3fV-Ba-EWt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="827" y="2010"/>
-        </scene>
     </scenes>
     <resources>
+        <image name="PleaseWait.gif" width="728" height="300"/>
+        <image name="TN_09-10_S_22A.jpg" width="167" height="175"/>
+        <image name="baby-blue-solid.jpg" width="1366" height="768"/>
         <image name="backDrop.jpg" width="480" height="360"/>
-        <image name="ipad-text-input.png" width="327" height="41"/>
+        <image name="ipad-button-blue.png" width="157" height="49"/>
+        <image name="star.jpg" width="204" height="204"/>
+        <image name="yellow_star-1331px.png" width="1331" height="1266"/>
     </resources>
     <classes>
+        <class className="CongratulationsController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CongratulationsController.h"/>
+            <relationships>
+                <relationship kind="action" name="playAgain:"/>
+                <relationship kind="outlet" name="myScore" candidateClass="UILabel"/>
+            </relationships>
+        </class>
         <class className="SettingsController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsController.h"/>
             <relationships>
@@ -219,14 +237,14 @@
                 <relationship kind="outlet" name="startButton" candidateClass="UIButton"/>
             </relationships>
         </class>
-        <class className="iPhoneControlsController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/iPhoneControlsController.h"/>
+        <class className="iPhoneMap" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/iPhoneMap.h"/>
             <relationships>
-                <relationship kind="action" name="doneTyping:" candidateClass="UITextField"/>
-                <relationship kind="action" name="valueChanged:"/>
-                <relationship kind="outlet" name="nativePB" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="textInput" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="overlay" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="questionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="scoreLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="toolbar" candidateClass="UIToolbar"/>
             </relationships>
         </class>
     </classes>

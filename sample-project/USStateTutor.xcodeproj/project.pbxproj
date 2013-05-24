@@ -115,6 +115,8 @@
 		76329B09174DD25300ED66CE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76329B03174DD21200ED66CE /* AudioToolbox.framework */; };
 		76329B0B174DD27600ED66CE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76329B0A174DD27600ED66CE /* MapKit.framework */; };
 		76329B0E174DD2B300ED66CE /* iPhoneMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 76329B0D174DD2B300ED66CE /* iPhoneMap.m */; };
+		76329B11174F0A5600ED66CE /* baby-blue-solid.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 76329B10174F0A5600ED66CE /* baby-blue-solid.jpg */; };
+		76329B13174F10D200ED66CE /* yellow_star-1331px.png in Resources */ = {isa = PBXBuildFile; fileRef = 76329B12174F10D200ED66CE /* yellow_star-1331px.png */; };
 		7F9B890A1614F4EB005A2B50 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F9B89091614F4EB005A2B50 /* Default-568h@2x.png */; };
 		7F9B894A1614F68E005A2B50 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9B890F1614F68E005A2B50 /* AppDelegate.m */; };
 		7F9B894B1614F68E005A2B50 /* ADVPopoverProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9B89131614F68E005A2B50 /* ADVPopoverProgressBar.m */; };
@@ -403,6 +405,8 @@
 		76329B0A174DD27600ED66CE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		76329B0C174DD2B300ED66CE /* iPhoneMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneMap.h; sourceTree = "<group>"; };
 		76329B0D174DD2B300ED66CE /* iPhoneMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPhoneMap.m; sourceTree = "<group>"; };
+		76329B10174F0A5600ED66CE /* baby-blue-solid.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "baby-blue-solid.jpg"; sourceTree = "<group>"; };
+		76329B12174F10D200ED66CE /* yellow_star-1331px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow_star-1331px.png"; sourceTree = "<group>"; };
 		7F9B89091614F4EB005A2B50 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		7F9B890E1614F68E005A2B50 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7F9B890F1614F68E005A2B50 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -736,6 +740,16 @@
 			path = Others;
 			sourceTree = "<group>";
 		};
+		76329B0F174F0A5600ED66CE /* newImages */ = {
+			isa = PBXGroup;
+			children = (
+				76329B12174F10D200ED66CE /* yellow_star-1331px.png */,
+				76329B10174F0A5600ED66CE /* baby-blue-solid.jpg */,
+			);
+			name = newImages;
+			path = Classes/Shared/newImages;
+			sourceTree = "<group>";
+		};
 		7F9B890C1614F68E005A2B50 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -985,6 +999,7 @@
 		ECF3E466151074BD00A8D893 /* ocean */ = {
 			isa = PBXGroup;
 			children = (
+				76329B0F174F0A5600ED66CE /* newImages */,
 				ECF3E472151074BE00A8D893 /* MainStoryboard.storyboard */,
 				ECD5714E151C99B100F4E307 /* MainStoryboard_iPhone.storyboard */,
 				7F9B890C1614F68E005A2B50 /* Classes */,
@@ -1465,6 +1480,8 @@
 				76329AFA174DD0C300ED66CE /* Icon-72.png in Resources */,
 				76329AFB174DD0C300ED66CE /* Icon.png in Resources */,
 				76329AFC174DD0C300ED66CE /* Icon@2x.png in Resources */,
+				76329B11174F0A5600ED66CE /* baby-blue-solid.jpg in Resources */,
+				76329B13174F10D200ED66CE /* yellow_star-1331px.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
