@@ -219,7 +219,9 @@ static NSString* const ANNOTATION_SELECTED_DESELECTED = @"mapAnnotationSelectedO
 					[self.congratulationController setWin:winAnswers];
 					[self.congratulationController setSound:self.sounds];
 					
-					[self presentModalViewController:self.congratulationController animated:YES];
+                    // TODO Segue
+                    
+					//[self presentModalViewController:self.congratulationController animated:YES];
 					
 					winAnswers = 0;
 					triesAnswer = 0;
