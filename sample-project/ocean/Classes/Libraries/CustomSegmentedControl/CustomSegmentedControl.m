@@ -101,13 +101,13 @@
     
     for (NSUInteger i = 0 ; i < buttons.count ; i++)
     {        
-        UIButton *button = [buttons objectAtIndex:i];
+        UIButton *button = buttons[i];
         button.frame = CGRectMake(horizontalOffset, 0.0, buttonWidth, button.frame.size.height);
         
         CGSize dividerSize = self.dividerImg.size;
         if (i != buttons.count - 1 && self.dividerImg)
         {
-            UIImageView *divider = [dividers objectAtIndex:i];
+            UIImageView *divider = dividers[i];
             divider.frame = CGRectMake(horizontalOffset + buttonWidth, 0.0, dividerSize.width, dividerSize.height);
         }
         

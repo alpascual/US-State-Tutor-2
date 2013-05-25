@@ -115,6 +115,7 @@ static NSString* const ANNOTATION_SELECTED_DESELECTED = @"mapAnnotationSelectedO
 
 - (void)mapView:(MKMapView *)mapView didAddAnnotationViews:(MyAnnotation *)views {
 	
+
 	for (MyAnnotation *anAnnotationView in views) {
 		//[anAnnotationView setCanShowCallout:YES];
 		[anAnnotationView addObserver:self
@@ -223,7 +224,6 @@ static NSString* const ANNOTATION_SELECTED_DESELECTED = @"mapAnnotationSelectedO
 					winAnswers = 0;
 					triesAnswer = 0;
 					
-					self.answerState;
 					self.answerState = nil;
 					
 					// Signal new Starts

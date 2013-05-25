@@ -109,7 +109,7 @@ static BlockBackground *_sharedInstance = nil;
 
 - (void)reduceAlphaIfEmpty
 {
-    if (self.subviews.count == 1 || (self.subviews.count == 2 && [[self.subviews objectAtIndex:0] isKindOfClass:[UIImageView class]]))
+    if (self.subviews.count == 1 || (self.subviews.count == 2 && [(self.subviews)[0] isKindOfClass:[UIImageView class]]))
     {
         self.alpha = 0.0f;
         self.userInteractionEnabled = NO;

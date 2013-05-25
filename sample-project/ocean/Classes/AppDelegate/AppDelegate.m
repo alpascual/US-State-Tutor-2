@@ -77,14 +77,9 @@
     
     [[UINavigationBar appearance] setBackgroundImage:navBarImage forBarMetrics:UIBarMetricsDefault]; 
     [[UINavigationBar appearance] setTitleTextAttributes:
-     [NSDictionary dictionaryWithObjectsAndKeys:
-      [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0], 
-      UITextAttributeTextColor, 
-      [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8], 
-      UITextAttributeTextShadowColor, 
-      [NSValue valueWithUIOffset:UIOffsetMake(0, -1)], 
-      UITextAttributeTextShadowOffset, 
-      nil]];
+     @{UITextAttributeTextColor: [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0], 
+      UITextAttributeTextShadowColor: [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8], 
+      UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetMake(0, -1)]}];
 
     
     UIImage *minImage = [UIImage tallImageNamed:@"ipad-slider-fill"];
@@ -112,9 +107,9 @@
     
     
     id<MasterViewControllerDelegate> delegate = [splitViewController.viewControllers lastObject];
-    UINavigationController* nav = [splitViewController.viewControllers objectAtIndex:0];
+    UINavigationController* nav = (splitViewController.viewControllers)[0];
     
-    MasterViewController* master = [nav.viewControllers objectAtIndex:0];
+    MasterViewController* master = (nav.viewControllers)[0];
     
     master.delegate = delegate;
     
@@ -125,7 +120,7 @@
 {
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
 	
-    UIViewController *controller1 = [[tabBarController viewControllers] objectAtIndex:0];
+    UIViewController *controller1 = [tabBarController viewControllers][0];
     [self configureTabBarItemWithImageName:@"tab-icon1.png" andText:@"Elements" forViewController:controller1];
     
     

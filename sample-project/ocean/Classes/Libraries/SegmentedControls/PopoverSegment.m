@@ -68,7 +68,7 @@
     [button setTitleShadowColor:[UIColor clearColor] forState:UIControlStateSelected];
     button.titleLabel.shadowOffset = CGSizeMake(0,-1);
     
-    [button setTitle:[self.titles objectAtIndex:segmentIndex] forState:UIControlStateNormal];
+    [button setTitle:(self.titles)[segmentIndex] forState:UIControlStateNormal];
     [button setBackgroundImage:buttonImage forState:UIControlStateNormal];
     [button setBackgroundImage:buttonPressedImage forState:UIControlStateHighlighted];
     [button setBackgroundImage:buttonPressedImage forState:UIControlStateSelected];

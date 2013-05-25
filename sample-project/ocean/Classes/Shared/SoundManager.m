@@ -89,7 +89,7 @@
 		
 		NSLog(@"%d sounds to play", [sndQueue count]);
 		NSString* snd = nil;
-		snd = [sndQueue objectAtIndex:0]; //1st sound
+		snd = sndQueue[0]; //1st sound
 		[sndQueue removeObjectAtIndex:0]; 
 		NSLog(@"returning sound from queue");
 		return snd;

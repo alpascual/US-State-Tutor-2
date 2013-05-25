@@ -114,9 +114,9 @@
 	double latitude = 0.0;
 	double longitude = 0.0;
 	
-	if([listItems count] >= 4 && [[listItems objectAtIndex:0] isEqualToString:@"200"]) {
-		latitude = [[listItems objectAtIndex:2] doubleValue];
-		longitude = [[listItems objectAtIndex:3] doubleValue];
+	if([listItems count] >= 4 && [listItems[0] isEqualToString:@"200"]) {
+		latitude = [listItems[2] doubleValue];
+		longitude = [listItems[3] doubleValue];
 	}
 	else {
 		//Show error

@@ -97,7 +97,7 @@
     UIColor* lightColor = [[UIColor blackColor] colorWithAlphaComponent:0.0];
     UIColor* darkColor = [[UIColor blackColor] colorWithAlphaComponent:0.3];
     
-    gradient.colors = [NSArray arrayWithObjects:(id)darkColor.CGColor, (id)lightColor.CGColor, nil];
+    gradient.colors = @[(id)darkColor.CGColor, (id)lightColor.CGColor];
     
     return gradient;
 }

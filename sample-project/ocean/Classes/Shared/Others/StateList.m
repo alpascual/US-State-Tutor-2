@@ -22,7 +22,7 @@
 		ran = arc4random() % listOfStates.count;
 	}while (_lastran == ran);
 	
-	return [listOfStates objectAtIndex:ran];
+	return listOfStates[ran];
 }
 
 - (void) BuildStates

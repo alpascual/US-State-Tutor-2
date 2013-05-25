@@ -52,14 +52,14 @@
     [self.navigationItem setRightBarButtonItem:editItem];
     
     self.navigationController.toolbarHidden = NO;
-    NSArray *segmentedItems = [NSArray arrayWithObjects:@"Bookmarks", @"Recents", @"Contacts", nil];
+    NSArray *segmentedItems = @[@"Bookmarks", @"Recents", @"Contacts"];
     PopoverSegment *ctrl = [[PopoverSegment alloc] init];
     ctrl.titles = segmentedItems;
     ctrl.frame = CGRectMake(0.0f, 5.0f, 310.0f, 30.0f);
     
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:ctrl];
     
-    NSArray *theToolbarItems = [NSArray arrayWithObjects:item, nil];
+    NSArray *theToolbarItems = @[item];
     [self setToolbarItems:theToolbarItems];
     
     self.tableView.delegate = self;
@@ -67,11 +67,11 @@
     //Initialize the array.
     listOfItems = [[NSMutableArray alloc] init];
     
-    NSArray *countriesToLiveInArray = [NSArray arrayWithObjects:@"Iceland", @"Greenland", @"Switzerland", @"Norway", @"New Zealand", @"Greece", @"Rome", @"Ireland", nil];
-    NSDictionary *countriesToLiveInDict = [NSDictionary dictionaryWithObject:countriesToLiveInArray forKey:@"Countries"];
+    NSArray *countriesToLiveInArray = @[@"Iceland", @"Greenland", @"Switzerland", @"Norway", @"New Zealand", @"Greece", @"Rome", @"Ireland"];
+    NSDictionary *countriesToLiveInDict = @{@"Countries": countriesToLiveInArray};
     
-    NSArray *countriesLivedInArray = [NSArray arrayWithObjects:@"India", @"U.S.A", nil];
-    NSDictionary *countriesLivedInDict = [NSDictionary dictionaryWithObject:countriesLivedInArray forKey:@"Countries"];
+    NSArray *countriesLivedInArray = @[@"India", @"U.S.A"];
+    NSDictionary *countriesLivedInDict = @{@"Countries": countriesLivedInArray};
     
     [listOfItems addObject:countriesToLiveInDict];
     [listOfItems addObject:countriesLivedInDict];
@@ -146,7 +146,7 @@
     
     for (NSDictionary *dictionary in listOfItems)
     {
-        NSArray *array = [dictionary objectForKey:@"Countries"];
+        NSArray *array = dictionary[@"Countries"];
         [searchArray addObjectsFromArray:array];
     }
     
@@ -193,8 +193,8 @@
     else {
         
         //Number of rows it should expect should be based on the section
-        NSDictionary *dictionary = [listOfItems objectAtIndex:section];
-        NSArray *array = [dictionary objectForKey:@"Countries"];
+        NSDictionary *dictionary = listOfItems[section];
+        NSArray *array = dictionary[@"Countries"];
         return [array count];
     }
 }
@@ -216,13 +216,13 @@
     UITableViewCell *cell = [aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if(searching)
-        cell.textLabel.text = [copyListOfItems objectAtIndex:indexPath.row];
+        cell.textLabel.text = copyListOfItems[indexPath.row];
     else {
         
         //First get the dictionary object
-        NSDictionary *dictionary = [listOfItems objectAtIndex:indexPath.section];
-        NSArray *array = [dictionary objectForKey:@"Countries"];
-        NSString *cellValue = [array objectAtIndex:indexPath.row];
+        NSDictionary *dictionary = listOfItems[indexPath.section];
+        NSArray *array = dictionary[@"Countries"];
+        NSString *cellValue = array[indexPath.row];
         cell.textLabel.text = cellValue;
     }
     
@@ -246,12 +246,12 @@
     NSString *selectedCountry = nil;
     
     if(searching)
-        selectedCountry = [copyListOfItems objectAtIndex:indexPath.row];
+        selectedCountry = copyListOfItems[indexPath.row];
     else {
         
-        NSDictionary *dictionary = [listOfItems objectAtIndex:indexPath.section];
-        NSArray *array = [dictionary objectForKey:@"Countries"];
-        selectedCountry = [array objectAtIndex:indexPath.row];
+        NSDictionary *dictionary = listOfItems[indexPath.section];
+        NSArray *array = dictionary[@"Countries"];
+        selectedCountry = array[indexPath.row];
     }
     NSLog(@"selected: %@", selectedCountry);
 }

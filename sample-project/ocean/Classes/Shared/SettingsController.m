@@ -34,13 +34,13 @@
 	{
 		// The device is an iPad running iPhone 3.2 or later.		
 		self.iPadmap = [[iPadMap alloc] initWithNibName:@"iPadMap" bundle:nil];
-		self.iPadmap.iLevel = [NSNumber numberWithUnsignedInteger:1];
+		self.iPadmap.iLevel = @1U;
 		
 	}
 	else
 	{
 		self.iPhonemap = [[iPhoneMap alloc] initWithNibName:@"iPhoneMap" bundle:nil];
-		self.iPhonemap.iLevel = [NSNumber numberWithUnsignedInteger:1];
+		self.iPhonemap.iLevel = @1U;
 	}	
 	
 	
@@ -76,21 +76,22 @@
 {
     
     //TODO
+    [self performSegueWithIdentifier:@"mainSegue" sender:self];
 	
-	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-	{
-		int iTemp = levelControl.selectedSegmentIndex;
-		self.iPadmap.iLevel = [NSNumber numberWithInt:iTemp];		// The device is an iPad running iPhone 3.2 or later.
-		[self presentModalViewController:self.iPadmap animated:YES];
-		
-	}
-	else
-	{
-		int iTemp = levelControl.selectedSegmentIndex;
-		self.iPhonemap.iLevel = [NSNumber numberWithInt:iTemp];
-		//[self.navigationController pushViewController:self.iPhonemap animated:YES];	
-		[self presentModalViewController:self.iPhonemap animated:YES];		
-	}	
+//	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+//	{
+//		int iTemp = levelControl.selectedSegmentIndex;
+//		self.iPadmap.iLevel = [NSNumber numberWithInt:iTemp];		// The device is an iPad running iPhone 3.2 or later.
+//		[self presentModalViewController:self.iPadmap animated:YES];
+//		
+//	}
+//	else
+//	{
+//		int iTemp = levelControl.selectedSegmentIndex;
+//		self.iPhonemap.iLevel = [NSNumber numberWithInt:iTemp];
+//		//[self.navigationController pushViewController:self.iPhonemap animated:YES];	
+//		[self presentModalViewController:self.iPhonemap animated:YES];		
+//	}	
 	
 }
 

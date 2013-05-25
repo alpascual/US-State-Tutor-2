@@ -310,7 +310,7 @@
 	 */
 	if(index < numberOfSegments)
 	{
-		[segments replaceObjectAtIndex:index withObject:object];
+		segments[index] = object;
 		[self resetSegments];
 	}
 }
@@ -358,9 +358,9 @@
 - (NSString *)titleForSegmentAtIndex:(NSUInteger)index {
 	if(index < [segments count])
 	{
-		if([[segments objectAtIndex:index] isKindOfClass:[NSString class]])
+		if([segments[index] isKindOfClass:[NSString class]])
 		{
-			return [segments objectAtIndex:index];
+			return segments[index];
 		}
 	}
 	
@@ -370,9 +370,9 @@
 - (UIImage *)imageForSegmentAtIndex:(NSUInteger)index {
 	if(index < [segments count])
 	{
-		if([[segments objectAtIndex:index] isKindOfClass:[UIImage class]])
+		if([segments[index] isKindOfClass:[UIImage class]])
 		{
-			return [segments objectAtIndex:index];
+			return segments[index];
 		}
 	}
 	

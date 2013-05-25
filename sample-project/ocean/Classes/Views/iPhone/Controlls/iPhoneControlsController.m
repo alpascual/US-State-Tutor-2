@@ -80,7 +80,7 @@
     [scrollView addSubview:offSwitch];
     
     
-    NSArray *objects = [NSArray arrayWithObjects:@"Yes", @"No", nil];
+    NSArray *objects = @[@"Yes", @"No"];
 	STSegmentedControl *segment = [[STSegmentedControl alloc] initWithItems:objects];
 	segment.frame = CGRectMake(100, 200, 120, 45);
 	segment.selectedSegmentIndex = 1;
@@ -125,7 +125,7 @@
     UIColor* lightColor = [[UIColor blackColor] colorWithAlphaComponent:0.0];
     UIColor* darkColor = [[UIColor blackColor] colorWithAlphaComponent:0.3];
     
-    gradient.colors = [NSArray arrayWithObjects:(id)darkColor.CGColor, (id)lightColor.CGColor, nil];
+    gradient.colors = @[(id)darkColor.CGColor, (id)lightColor.CGColor];
     
     return gradient;
 }

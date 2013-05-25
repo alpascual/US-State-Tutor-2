@@ -108,11 +108,9 @@ static UIFont *buttonFont = nil;
 
 - (void)addButtonWithTitle:(NSString *)title color:(NSString*)color block:(void (^)())block 
 {
-    [_blocks addObject:[NSArray arrayWithObjects:
-                        block ? [block copy] : [NSNull null],
+    [_blocks addObject:@[block ? [block copy] : [NSNull null],
                         title,
-                        color,
-                        nil]];
+                        color]];
 }
 
 - (void)addButtonWithTitle:(NSString *)title block:(void (^)())block 
@@ -136,9 +134,9 @@ static UIFont *buttonFont = nil;
     NSUInteger index = 0;
     for (NSUInteger i = 0; i < _blocks.count; i++)
     {
-        NSArray *block = [_blocks objectAtIndex:i];
-        NSString *title = [block objectAtIndex:1];
-        NSString *color = [block objectAtIndex:2];
+        NSArray *block = _blocks[i];
+        NSString *title = block[1];
+        NSString *color = block[2];
 
         UIImage *image = [UIImage tallImageNamed:[NSString stringWithFormat:@"alert-%@-button.png", color]];
         image = [image stretchableImageWithLeftCapWidth:(int)(image.size.width+1)>>1 topCapHeight:0];
@@ -165,8 +163,8 @@ static UIFont *buttonFont = nil;
             if (size.width < maxHalfWidth - kAlertViewBorder)
             {
                 // It might fit. Check the next Button
-                NSArray *block2 = [_blocks objectAtIndex:i+1];
-                NSString *title2 = [block2 objectAtIndex:1];
+                NSArray *block2 = _blocks[i+1];
+                NSString *title2 = block2[1];
                 size = [title2 sizeWithFont:buttonFont 
                                 minFontSize:10 
                              actualFontSize:nil
@@ -295,7 +293,7 @@ static UIFont *buttonFont = nil;
 {
     if (buttonIndex >= 0 && buttonIndex < [_blocks count])
     {
-        id obj = [[_blocks objectAtIndex: buttonIndex] objectAtIndex:0];
+        id obj = _blocks[buttonIndex][0];
         if (![obj isEqual:[NSNull null]])
         {
             ((void (^)())obj)();
