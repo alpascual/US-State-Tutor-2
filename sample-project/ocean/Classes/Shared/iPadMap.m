@@ -70,7 +70,7 @@ static NSString* const ANNOTATION_SELECTED_DESELECTED = @"mapAnnotationSelectedO
 		
 		// Needs to be move somewhere else when the press the button maybe
 		self.answerState = [self.mapUtils StartQuestion:myLevel:self.mapView:self.states:self.overlay];
-		questionLabel.text;
+		
 		questionLabel.text = nil;
 		
 		questionLabel.text = [[NSString alloc]initWithFormat:@"Can you find the state of %@?", self.answerState];
@@ -78,7 +78,7 @@ static NSString* const ANNOTATION_SELECTED_DESELECTED = @"mapAnnotationSelectedO
 		self.mapView.delegate = self;
 		
 		if (self.resultManager != nil){
-			self.resultManager;
+			
 			self.resultManager = [[ResultsManager alloc] init];
 		}
 	}
@@ -107,16 +107,6 @@ static NSString* const ANNOTATION_SELECTED_DESELECTED = @"mapAnnotationSelectedO
 }
 
 
-- (void)dealloc {
-    	
-	[self removeObserver:self forKeyPath:@"selected"];
-	self.states;
-	self.mapUtils;
-	self.sounds;
-	self.resultManager;
-	self.overlay;
-	
-}
 
 
 - (void)mapView:(MKMapView *)mapView didAddAnnotationViews:(MyAnnotation *)views {
@@ -170,7 +160,6 @@ static NSString* const ANNOTATION_SELECTED_DESELECTED = @"mapAnnotationSelectedO
 					
 					[self.sounds LoadRandomSound:@"yes":@"wav"];
 					
-					self.answerState;
 					self.answerState = nil;
 					
 					// Removing Observations
@@ -193,7 +182,6 @@ static NSString* const ANNOTATION_SELECTED_DESELECTED = @"mapAnnotationSelectedO
 					// Needs to be move somewhere else when the press the button maybe
 					self.answerState = [self.mapUtils StartQuestion:myLevel:self.mapView:self.states:self.overlay];
 					
-					questionLabel.text;
 					questionLabel.text = nil;
 					
 					questionLabel.text = [[NSString alloc]initWithFormat:@"Can you find the state of %@?", self.answerState];
@@ -212,7 +200,6 @@ static NSString* const ANNOTATION_SELECTED_DESELECTED = @"mapAnnotationSelectedO
 					winAnswers = 0;
 					triesAnswer = 0;						
 					
-					self.answerState;
 					self.answerState = nil;
 					
 					// Signal new Starts
