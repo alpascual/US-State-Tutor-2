@@ -10,6 +10,8 @@
 #import <MapKit/MapKit.h>
 #import "StateList.h"
 #import "SoundManager.h"
+#import "CJSONDeserializer.h"
+#import "NSDictionary_JSONExtensions.h"
 
 @interface MapUtils : NSObject {
 

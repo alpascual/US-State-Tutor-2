@@ -106,21 +106,34 @@
 
 -(CLLocationCoordinate2D) addressLocation:(NSString*)addressField
 {
-	NSString *urlString = [NSString stringWithFormat:@"http://maps.google.com/maps/geo?q=%@&output=csv", 
+    //http://maps.googleapis.com/maps/api/geocode/json?address=New%20York&sensor=false
+    
+	NSString *urlString = [NSString stringWithFormat:@"http://maps.googleapis.com/maps/api/geocode/json?address=%@&sensor=false", 
 						   [addressField stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
 	NSString *locationString = [NSString stringWithContentsOfURL:[NSURL URLWithString:urlString]];
-	NSArray *listItems = [locationString componentsSeparatedByString:@","];
-	
-	double latitude = 0.0;
-	double longitude = 0.0;
-	
-	if([listItems count] >= 4 && [listItems[0] isEqualToString:@"200"]) {
-		latitude = [listItems[2] doubleValue];
-		longitude = [listItems[3] doubleValue];
-	}
-	else {
-		//Show error
-	}
+	//NSArray *listItems = [locationString componentsSeparatedByString:@","];
+	//NSDictionary *response = [locationString
+    NSLog(@" Response %@", locationString);
+    
+    NSError *error = nil;
+    NSDictionary *theDictionary = [NSDictionary dictionaryWithJSONString:locationString error:&error];
+    NSLog(@"dictionary %@", theDictionary);
+    
+    NSArray *data2 = [theDictionary objectForKey:@"results"];
+    NSLog(@"Data %@ and count %d", data2, data2.count);
+    
+    int numberObject = data2.count - 1;
+    
+    NSDictionary *currentDictionaty = [data2 objectAtIndex:numberObject];
+    
+    NSDictionary  *myAddress = [currentDictionaty objectForKey:@"geometry"];
+    NSLog(@"Address %@", myAddress);
+    
+    NSDictionary *latLon = [myAddress objectForKey:@"location"];
+    
+	double latitude = [[latLon objectForKey:@"lat"] doubleValue];
+	double longitude = [[latLon objectForKey:@"lng"] doubleValue];
+
 	CLLocationCoordinate2D location;
 	location.latitude = latitude;
 	location.longitude = longitude;
@@ -128,10 +141,5 @@
 	return location;
 }
 
-- (void) dealloc
-{
-	
-	self.sounds;
-}
 
 @end
